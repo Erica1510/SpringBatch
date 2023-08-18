@@ -1,1 +1,20 @@
-
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/sales_info
+    username: localhost
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+  batch:
+    jdbc:
+      initialize-schema: always
+#      schema: \org\springframework\batch\spring-batch-core\5.0.2\spring-batch-core-5.0.2.jar!\org\springframework\batch\core\schema-mysql.sql
+file:
+  path:
+    to:
+      be:
+        processed: src/main/resources/data/Pascoal-Store.csv
+    was:
+      processed: src/main/resources/data/processed/Pascoal-Store.csv

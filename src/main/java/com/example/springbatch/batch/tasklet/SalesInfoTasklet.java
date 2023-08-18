@@ -1,4 +1,4 @@
-package com.example.batch.tasklet;
+package com.example.springbatch.batch.tasklet;
 
 import org.springframework.batch.core.StepContribution;
 import org.springframework.batch.core.configuration.annotation.StepScope;
@@ -14,7 +14,7 @@ import java.nio.file.StandardCopyOption;
 
 @Component
 @StepScope
-public class PersonTasklet implements Tasklet {
+public class SalesInfoTasklet implements Tasklet {
 
     @Value("${file.path.to.be.processed}")
     private String processingFilePath;
